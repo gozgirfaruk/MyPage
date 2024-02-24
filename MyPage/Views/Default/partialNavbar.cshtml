@@ -1,0 +1,41 @@
+﻿@using MyPage.Models.Entity
+@model List<About>
+
+
+<a href="#" class="js-colorlib-nav-toggle colorlib-nav-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><i></i></a>
+
+
+<aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+    @foreach (var item in Model)
+    {
+        <div class="text-center">
+            <div class="author-img" style="background-image: url(@item.ImageUrlTwo);"></div>
+            <h1 id="colorlib-logo"><a href="#">@item.NameSurname</a></h1>
+            <span class="position"><a href="#">@item.Title</a> in Turkey</span>
+
+        </div>
+    }
+
+    <nav id="colorlib-main-menu" role="navigation" class="navbar">
+        <div id="navbar" class="collapse">
+            <ul>
+                <li class="active"><a href="#" data-nav-section="home">Ana Sayfa</a></li>
+                <li><a href="#" data-nav-section="about">Hakkımda</a></li>
+                <li><a href="#" data-nav-section="services">Services</a></li>
+                <li><a href="#" data-nav-section="skills">Yeteneklerim</a></li>
+                <li><a href="#" data-nav-section="education">Education</a></li>
+                <li><a href="#" data-nav-section="experience">Experience</a></li>
+                <li><a href="#" data-nav-section="work">Work</a></li>
+                <li><a href="#" data-nav-section="blog">Blog</a></li>
+                <li><a href="#" data-nav-section="contact">İletişim</a></li>
+             
+
+            </ul>
+
+        </div>
+    </nav>
+    <div style="text-align:center">
+    @Html.Action("partialNavbarSocial", "Default")
+</div>
+    
+</aside>

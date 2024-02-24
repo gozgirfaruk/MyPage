@@ -1,0 +1,13 @@
+﻿@using MyPage.Models.Entity
+@model List<Social>
+
+
+<li>
+    @foreach (var item in Model)
+    {
+
+        <a href="@item.Url" target="_blank"><i class="@item.IconUrl" style="font-size:24px"></i></a>
+
+
+    }
+</li>
