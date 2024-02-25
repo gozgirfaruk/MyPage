@@ -27,18 +27,33 @@ namespace MyPage.Controllers
             var values = db.Abouts.ToList();
             return PartialView(values);
         }
+
+        public PartialViewResult partialAboutSkill()
+        {
+            var values = db.Skills.ToList();
+            return PartialView(values);
+        }
         public PartialViewResult partialEducation()
         {
-            return PartialView();
+            var values = db.Educations.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult partialExperience()
         {
-            return PartialView();
+            var values = db.Experiences.ToList();
+            return PartialView(values);
         }
         public PartialViewResult partialSkill()
         {
-            return PartialView();
+            var values = db.Skills.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult partialBlog()
+        {
+            var values = db.Projects.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult partialNavbar()
@@ -50,6 +65,25 @@ namespace MyPage.Controllers
         public PartialViewResult partialNavbarSocial()
         {
             var values = db.Socials.ToList();
+            return PartialView(values);
+        }
+        [HttpGet]
+        public PartialViewResult partialContact()
+        {
+            var values = db.Contacts.ToList();
+            return PartialView(values);
+        }
+        [HttpPost]
+        public PartialViewResult partialContact(Contact p)
+        {
+            db.Contacts.Add(p);
+            db.SaveChanges();
+            return PartialView();
+        }
+
+        public PartialViewResult partialTestimonial()
+        {
+            var values = db.Referances.ToList();
             return PartialView(values);
         }
 

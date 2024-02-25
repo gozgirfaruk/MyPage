@@ -1,0 +1,17 @@
+﻿@using MyPage.Models.Entity
+@model List<Skill>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-2 animate-box" data-animate-effect="fadeInTop">
+            <div class="services @item.Color">
+                <span class="icon2"><i class="icon-data"></i></span>
+                <h3>@item.Header</h3>
+            </div>
+        </div>
+    }
+
+
+</div>

@@ -133,6 +133,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402250947463_mig2.cs" />
+    <Compile Include="Migrations\202402250947463_mig2.designer.cs">
+      <DependentUpon>202402250947463_mig2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402251225445_AddedRef.cs" />
+    <Compile Include="Migrations\202402251225445_AddedRef.designer.cs">
+      <DependentUpon>202402251225445_AddedRef.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202402251227179_refColumn.cs" />
+    <Compile Include="Migrations\202402251227179_refColumn.designer.cs">
+      <DependentUpon>202402251227179_refColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Entity\About.cs" />
     <Compile Include="Models\Entity\Address.cs" />
@@ -140,6 +152,7 @@
     <Compile Include="Models\Entity\Education.cs" />
     <Compile Include="Models\Entity\Experience.cs" />
     <Compile Include="Models\Entity\Project.cs" />
+    <Compile Include="Models\Entity\Referance.cs" />
     <Compile Include="Models\Entity\Skill.cs" />
     <Compile Include="Models\Entity\Social.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,6 +189,7 @@
     <Content Include="Template\MasterYU\fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="Template\MasterYU\fonts\icomoon\icomoon.svg" />
     <Content Include="Template\MasterYU\images\about.jpg" />
+    <Content Include="Template\MasterYU\images\babek.png" />
     <Content Include="Template\MasterYU\images\blog-1.jpg" />
     <Content Include="Template\MasterYU\images\blog-2.jpg" />
     <Content Include="Template\MasterYU\images\blog-3.jpg" />
@@ -190,8 +204,12 @@
     <Content Include="Template\MasterYU\images\img_bg_1.jpg" />
     <Content Include="Template\MasterYU\images\img_bg_2.jpg" />
     <Content Include="Template\MasterYU\images\img_bg_3.jpg" />
+    <Content Include="Template\MasterYU\images\kapak.jpg" />
+    <Content Include="Template\MasterYU\images\kids.png" />
     <Content Include="Template\MasterYU\images\loc.png" />
     <Content Include="Template\MasterYU\images\me.png" />
+    <Content Include="Template\MasterYU\images\meyawo.png" />
+    <Content Include="Template\MasterYU\images\trips.png" />
     <Content Include="Template\MasterYU\index.html" />
     <Content Include="Template\MasterYU\js\bootstrap.min.js" />
     <Content Include="Template\MasterYU\js\google_map.js" />
@@ -531,6 +549,10 @@
     <Content Include="Views\Default\partialExperience.cshtml" />
     <Content Include="Views\Default\partialSkill.cshtml" />
     <Content Include="Views\Default\partialNavbarSocial.cshtml" />
+    <Content Include="Views\Default\partialAboutSkill.cshtml" />
+    <Content Include="Views\Default\partialBlog.cshtml" />
+    <Content Include="Views\Default\partialContact.cshtml" />
+    <Content Include="Views\Default\partialTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -547,6 +569,17 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202402250947463_mig2.resx">
+      <DependentUpon>202402250947463_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402251225445_AddedRef.resx">
+      <DependentUpon>202402251225445_AddedRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402251227179_refColumn.resx">
+      <DependentUpon>202402251227179_refColumn.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
