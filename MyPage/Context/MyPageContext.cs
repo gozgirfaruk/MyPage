@@ -18,7 +18,7 @@ namespace MyPage.Context
         public DbSet<Skill> Skills { get; set; }
         public DbSet<Social> Socials { get; set; }
         public DbSet<Referance> Referances { get; set; }
-        
+        public DbSet<Admin> Admins { get; set; }
 
 
 

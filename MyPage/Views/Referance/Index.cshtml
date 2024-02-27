@@ -1,0 +1,83 @@
+﻿@using MyPage.Models.Entity
+@model List<Referance>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+
+
+}
+
+<body id="page-top">
+    <div id="wrapper">
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <div class="container-fluid">
+                    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Referanslarım Tablosu</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>İsim</th>
+                                            <th>Ünvanı</th>
+                                            <th>Renk Paleti</th>
+                                            <th>İcon URl</th>
+                                            <th>Sosyal Medya Hesabı</th>
+                                            <th>Düşünceleri</th>
+                                            <th>Güncelle</th>
+                                            <th>Sil</th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model)
+                                        {
+                                            <tr>
+                                                <td>@item.Name</td>
+                                                <td>@item.Title</td>
+                                                <td>@item.color</td>
+                                                <td>@item.iconurl</td>
+                                                <td>@item.socialmedia</td>
+                                                <td>@item.Description</td>
+                                                <td>
+                                                    <a href="/Referance/Update/@item.ReferanceID" class="btn btn-warning btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-exclamation"></i>
+                                                        </span>
+                                                        <span class="text">Güncelle</span>
+                                                    </a>
+                                                </td>
+                                                <td>
+                                                    <a href="/Referance/Delete/@item.ReferanceID" class="btn btn-danger btn-icon-split">
+                                                        <span class="icon text-white-50">
+                                                            <i class="fas fa-trash"></i>
+                                                        </span>
+                                                        <span class="text">Sil</span>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                        }
+
+                                    </tbody>
+                                </table>
+                                <a href="/Referance/Create/" class="btn btn-primary btn-icon-split">
+                                    <span class="icon text-white-50">
+                                        <i class="fas fa-flag"></i>
+                                    </span>
+                                    <span class="text">Yeni Referans Ekle</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+</body>

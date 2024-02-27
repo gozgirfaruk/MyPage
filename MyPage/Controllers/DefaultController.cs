@@ -8,6 +8,7 @@ using MyPage.Models.Entity;
 
 namespace MyPage.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         // GET: Default
