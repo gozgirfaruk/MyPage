@@ -26,7 +26,11 @@
            
                                     <form class="user" method="post">
                                         <div class="form-group">
-                                            @Html.TextBoxFor(x => x.AboutID, new {@type="hidden"})
+                                            @Html.TextBoxFor(x => x.AboutID, new { @type = "hidden" })
+                                        </div>
+                                        <div class="form-group">
+                                            @Html.Label("Download Cv")
+                                            @Html.TextBoxFor(x => x.Header, new { @class = "form-control form-control-user" })
                                         </div>
                                         <div class="form-group">
                                             @Html.Label("Başlık")
@@ -42,20 +46,20 @@
                                         </div>
                                         <div class="form-group">
                                             @Html.Label("Profil Resmi")
-                                            @Html.TextBoxFor(x => x.ImageUrlTwo, new { @class = "form-control form-control-user"})
+                                            @Html.TextBoxFor(x => x.ImageUrlTwo, new { @class = "form-control form-control-user" })
                                         </div>
                                         <div class="form-group">
                                             @Html.Label("Hakkımda Yazısı")
-                                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control form-control-user" , @rows=5})
+                                            @Html.TextAreaFor(x => x.Description, new { @class = "form-control form-control-user", @rows = 5 })
                                         </div>
-                                      
+
                                         <div class="form-group">
                                             @Html.Label("Geniş Açıklama")
-                                            @Html.TextAreaFor(x => x.DescriptionSmall, new { @class = "form-control form-control-user", @rows =5 })
+                                            @Html.TextAreaFor(x => x.DescriptionSmall, new { @class = "form-control form-control-user", @rows = 5 })
                                         </div>
                                         <br />
 
-                                       <button class="btn btn-primary btn-user btn-block" type="submit">Güncelle</button>
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">Güncelle</button>
                                     </form>
 
                                 </div>

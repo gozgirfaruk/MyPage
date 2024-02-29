@@ -21,7 +21,8 @@ namespace MyPage.Controllers
 
         public PartialViewResult partialCover()
         {
-            return PartialView();
+            var values = db.Abouts.ToList();
+            return PartialView(values);
         }
         public PartialViewResult partialAbout()
         {

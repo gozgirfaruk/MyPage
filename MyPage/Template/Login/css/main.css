@@ -460,3 +460,44 @@ iframe {
     opacity: 1;
   }
 }
+
+
+/* Tablet için düzenleme */
+@media (max-width: 768px) {
+	.table-responsive {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+		.table-responsive > .table {
+			margin-bottom: 0;
+			min-width: 100%;
+		}
+}
+
+/* Mobil için düzenleme */
+@media (max-width: 576px) {
+	.table-responsive {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+		.table-responsive > .table {
+			margin-bottom: 0;
+			min-width: 100%;
+		}
+
+	.btn-icon-split .icon,
+	.btn-icon-split .text {
+		display: none;
+	}
+
+	.btn-icon-split .icon {
+		width: 40px;
+	}
+
+	.btn-icon-split .text {
+		width: calc(100% - 40px);
+		text-align: center;
+	}
+}

@@ -18,6 +18,19 @@ namespace MyPage.Controllers
             var values = repo.TList();
             return View(values);
         }
+        [HttpGet]
+        public ActionResult Bring(int id)
+        {
+            var values = repo.TFind(x => x.ContactID == id);
+            ViewBag.c = values.eMail.ToString();
+            return View(values);
+        }
+        [HttpPost]
+        public ActionResult Bring(Contact p)
+        {
+            
+            return RedirectToAction("Index");
+        }
 
 
         public ActionResult Delete(int id)

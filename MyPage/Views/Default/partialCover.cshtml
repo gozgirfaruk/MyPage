@@ -1,4 +1,7 @@
-﻿<section id="colorlib-hero" class="js-fullheight" data-section="home">
+﻿@using MyPage.Models.Entity
+@model List<About>
+
+<section id="colorlib-hero" class="js-fullheight" data-section="home">
     <div class="flexslider js-fullheight">
         <ul class="slides">
             <li style="background-image: url(/Template/MasterYU/images/kapak.jpg);">
@@ -13,8 +16,11 @@
                                     <h1>Ben Ömer </h1>
                                     <br />
 
+                                    @foreach (var item in Model)
+                                    {
+                                        <p><a download href="@item.Header" class="btn btn-primary btn-learn">CV İndir <i class="icon-download4"></i></a></p>
+                                    }
 
-                                    <p><a  download href="https://drive.google.com/file/d/1Sr71iAcElubT9rOX0MJtMLdo6n1GHeB9/view?usp=sharing" class="btn btn-primary btn-learn" >CV İndir <i class="icon-download4"></i></a></p>
                                 </div>
                             </div>
                         </div>
